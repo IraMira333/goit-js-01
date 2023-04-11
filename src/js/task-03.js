@@ -57,7 +57,7 @@ thumbBoxItems.forEach((item) => {
   item.classList.add("thumb");
 });
 
-const imageInThumb = document.querySelectorAll("img");
+const imageInThumb = document.querySelectorAll(".thumb > img");
 
 imageInThumb.forEach((image) => {
   image.classList.add("image-in-thumb");
