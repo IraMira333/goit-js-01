@@ -1,0 +1,17 @@
+.box-flex {
+display: flex;
+list-style: none;
+gap: 10px;
+}
+
+.thumb {
+width: 260px;
+height: 170px;
+}
+
+.image-in-thumb {
+display: block;
+height: 100%;
+width: 100%;
+object-Fit: cover;
+}
