@@ -38,28 +38,27 @@ const images = [
 // });
 // console.log(arrayImages);
 
-const makeArrayImages = (images) => {
-  return images.map(({ url, alt }) => {
-    let liElem = document.createElement("li");
-    let imgElem = document.createElement("img");
-
-    imgElem.src = url;
-    imgElem.alt = alt;
-
-    liElem.classList.add("thumb");
-
-    imgElem.classList.add("image-in-thumb");
-
-    liElem.appendChild(imgElem);
-
-    console.log(liElem);
-    return liElem;
-  });
+const makeListItemWithImage = ({ url, alt }) => {
+  return `<li>
+        <img src= ${url} alt= ${alt}>
+    </li>`;
 };
-const arrayImages = makeArrayImages(images);
+
+const arrayImages = images.map(makeListItemWithImage).join("");
+
 const listImages = document.querySelector(".gallery");
-listImages.append(...arrayImages);
 listImages.classList.add("box-flex");
-// listImages.style.display = "flex";
-// listImages.style.listStyle = "none";
-// listImages.style.gap = "10px";
+
+listImages.insertAdjacentHTML("beforeend", arrayImages);
+console.log(listImages);
+const thumbBoxItems = document.querySelectorAll("li");
+
+thumbBoxItems.forEach((item) => {
+  item.classList.add("thumb");
+});
+
+const imageInThumb = document.querySelectorAll("img");
+
+imageInThumb.forEach((image) => {
+  image.classList.add("image-in-thumb");
+});
