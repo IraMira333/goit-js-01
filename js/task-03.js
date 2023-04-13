@@ -23,14 +23,7 @@ const images = [
 
 //   divEl.appendChild(imgElem);
 //   divEl.classList.add("thumb");
-//   divEl.style.width = "260px";
-//   divEl.style.height = "170px";
-
-//   imgElem.style.display = "block";
-//   imgElem.style.width = "100%";
-//   imgElem.style.height = "100%";
-//   imgElem.style.objectFit = "cover";
-
+//  
 //   liElem.appendChild(divEl);
 
 //   console.log(liElem);
