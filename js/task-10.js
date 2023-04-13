@@ -25,7 +25,7 @@ function createBoxes() {
     divEl.style.width = newWidth + "px";
     divEl.style.height = newHeight + "px";
     divEl.style.backgroundColor = getRandomHexColor();
-    console.log(divEl);
+
     arrayDivs.push(divEl);
   }
 
