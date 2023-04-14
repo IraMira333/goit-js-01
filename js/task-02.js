@@ -10,15 +10,15 @@ const ingredients = [
 // liElem.textContent = ingredients[1];
 // liElem.classList.add("item");
 // console.log(liElem);
-const arrayIngredients = [];
-ingredients.forEach((ingredient) => {
+
+const arrayIngredients = ingredients.map((ingredient) => {
   let liElem = document.createElement("li");
   liElem.textContent = ingredient;
   liElem.classList.add("item");
-  // console.log(liElem);
-  arrayIngredients.push(liElem);
+  console.log(liElem);
+  return liElem;
 });
-// console.log(arrayIngredients);
+console.log(arrayIngredients);
 const listIngredientsEl = document.querySelector("#ingredients");
 console.log(listIngredientsEl);
 listIngredientsEl.append(...arrayIngredients);
