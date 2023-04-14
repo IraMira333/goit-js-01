@@ -23,7 +23,7 @@ const images = [
 
 //   divEl.appendChild(imgElem);
 //   divEl.classList.add("thumb");
-//  
+//
 //   liElem.appendChild(divEl);
 
 //   console.log(liElem);
@@ -32,8 +32,8 @@ const images = [
 // console.log(arrayImages);
 
 const makeListItemWithImage = ({ url, alt }) => {
-  return `<li>
-        <img src= ${url} alt= ${alt}>
+  return `<li class="thumb">
+        <img class="image-in-thumb" src= ${url} alt= ${alt}>
     </li>`;
 };
 
@@ -44,14 +44,3 @@ listImages.classList.add("box-flex");
 
 listImages.insertAdjacentHTML("beforeend", arrayImages);
 console.log(listImages);
-const thumbBoxItems = document.querySelectorAll("li");
-
-thumbBoxItems.forEach((item) => {
-  item.classList.add("thumb");
-});
-
-const imageInThumb = document.querySelectorAll(".thumb > img");
-
-imageInThumb.forEach((image) => {
-  image.classList.add("image-in-thumb");
-});
