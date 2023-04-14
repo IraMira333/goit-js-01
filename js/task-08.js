@@ -9,12 +9,14 @@ function onFormSubmit(event) {
   const password = formElmts.password.value;
   if (email === "" || password === "") {
     alert("All fields must be filled!");
+  } else {
+    const formData = {
+      email,
+      password,
+    };
+    console.log("Data: ", formData);
   }
-  const formData = {
-    email,
-    password,
-  };
-  console.log("Data: ", formData);
   event.target.reset();
+
   //const formData = new FormData(event.curentTarget);
 }
