@@ -9,14 +9,17 @@ const refs = {
   destroyBtn: document.querySelector("[data-destroy]"),
   amountOfDiv: document.querySelector("#controls").firstElementChild,
 };
-console.log(refs.amountOfDiv);
+
 refs.createBtn.addEventListener("click", createBoxes);
 
 refs.destroyBtn.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
-  const amount = refs.amountOfDiv.value;
-  if ((amount >= 1) & (amount <= 100)) {
+  const amount = Number(refs.amountOfDiv.value);
+  const min = Number(refs.amountOfDiv.getAttribute("min"));
+  const max = Number(refs.amountOfDiv.getAttribute("max"));
+
+  if ((amount >= min) & (amount <= max)) {
   }
   const arrayDivs = [];
 
@@ -36,5 +39,5 @@ function createBoxes() {
 
 function destroyBoxes() {
   refs.containerDivsEl.innerHTML = "";
-  refs.amountOfDiv.innerHTML = "";
+  refs.amountOfDiv.value = "";
 }
